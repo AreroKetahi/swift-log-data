@@ -9,15 +9,15 @@ import SwiftData
 
 @ModelActor
 public actor LoggingModelActor {
-    func insert<T: PersistentModel>(_ model: T) {
+    func insert(_ model: Log) {
         self.modelContext.insert(model)
     }
     
-    public func fetch<T: PersistentModel>(_ descriptor: FetchDescriptor<T>) throws -> [T] {
+    public func fetch(_ descriptor: FetchDescriptor<Log> = .init()) throws -> [Log] {
         try self.modelContext.fetch(descriptor)
     }
     
-    func delete<T: PersistentModel>(_ model: T) {
+    func delete(_ model: Log) {
         self.modelContext.delete(model)
     }
     

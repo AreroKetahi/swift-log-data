@@ -34,7 +34,7 @@ let package = Package(
         .testTarget(
             name: "swift-log-dataTests",
             dependencies: [
-                "swift-log-data",
+                "DataLogger",
                 .product(name: "Logging", package: "swift-log"),
             ]
         ),

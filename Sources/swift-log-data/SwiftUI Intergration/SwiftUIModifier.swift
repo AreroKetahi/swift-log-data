@@ -19,3 +19,9 @@ extension View {
         self.modifier(LoggingModelContainerModifier())
     }
 }
+
+extension Scene {
+    public func logContainer() -> some Scene {
+        self.modelContainer(LogContainer.default.container)
+    }
+}
